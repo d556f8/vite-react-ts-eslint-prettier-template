@@ -1,6 +1,9 @@
-import logo from '~/logo.svg';
+import logo from '@Assets/logo.svg';
+import React, { useState } from 'react';
 
 const Hello = () => {
+  const [count, setCount] = useState(0);
+
   return (
     <div
       style={{
@@ -29,12 +32,16 @@ const Hello = () => {
         <li>🔨 Eslint</li>
         <li>💅 Prettier</li>
       </ul>
-      <p>Don&apos;t forgot to install Eslint and Prettier in your VSCode</p>
+      <span style={{ fontSize: '5rem' }}>{count}</span>
+      <button className='counter' onClick={() => setCount(count + 1)}>
+        Count!
+      </button>
+      <p>Don't forgot to install Eslint and Prettier in your VSCode</p>
       <div>
         <a
           style={{ color: '#F24C4C' }}
           target='_blank'
-          href='https://github.com/igdev116/vite-react-ts-eslint-prettier'
+          href='https://github.com/d556f8/vite-react-ts-eslint-prettier-template'
           rel='noreferrer'
         >
           Github
